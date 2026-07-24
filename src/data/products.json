@@ -1,0 +1,1652 @@
+[
+  {
+    "id": "1-4-dioxane",
+    "name": "1,4-Dioxane",
+    "slug": "1-4-dioxane",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "acetic-acid",
+    "name": "Acetic Acid",
+    "slug": "acetic-acid",
+    "category": "solvents",
+    "origin": "China",
+    "packing": "220kg Drum/Tanker",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "acetone",
+    "name": "Acetone",
+    "slug": "acetone",
+    "category": "solvents",
+    "origin": "Taiwan",
+    "packing": "160kg Drum/Tanker",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "acetonitrile",
+    "name": "Acetonitrile",
+    "slug": "acetonitrile",
+    "category": "solvents",
+    "origin": "China/Taiwan/Local",
+    "packing": "160kg Drum",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "allura-red-supra",
+    "name": "Allura Red Supra",
+    "slug": "allura-red-supra",
+    "category": "colours",
+    "origin": "Koelow-351",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "amaranth-supra",
+    "name": "Amaranth Supra",
+    "slug": "amaranth-supra",
+    "category": "colours",
+    "origin": "Koelow-850",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ascorbic-acid",
+    "name": "Ascorbic Acid",
+    "slug": "ascorbic-acid",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "aspartame",
+    "name": "Aspartame",
+    "slug": "aspartame",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "bcaa-2-1-1",
+    "name": "BCAA 2:1:1",
+    "slug": "bcaa-2-1-1",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "benzene",
+    "name": "Benzene",
+    "slug": "benzene",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drum/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "benzene-sulphonyl-chloride",
+    "name": "Benzene Sulphonyl Chloride",
+    "slug": "benzene-sulphonyl-chloride",
+    "category": "solvents",
+    "origin": "DharmsiMoraji Chemicals",
+    "packing": "Drum Pack 250kg",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "bisphenol-a",
+    "name": "Bisphenol-A",
+    "slug": "bisphenol-a",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "black-pn-supra",
+    "name": "Black PN Supra",
+    "slug": "black-pn-supra",
+    "category": "colours",
+    "origin": "Koelow-082",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "brilliant-blue-supra",
+    "name": "Brilliant Blue Supra",
+    "slug": "brilliant-blue-supra",
+    "category": "colours",
+    "origin": "Koelow-900",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "brown-ht-supra",
+    "name": "Brown HT Supra",
+    "slug": "brown-ht-supra",
+    "category": "colours",
+    "origin": "Koelow-582",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "calcium-cmc",
+    "name": "Calcium CMC",
+    "slug": "calcium-cmc",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "calcium-silicate",
+    "name": "Calcium Silicate",
+    "slug": "calcium-silicate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "carbomer-940",
+    "name": "Carbomer 940",
+    "slug": "carbomer-940",
+    "category": "excipients",
+    "origin": "Shellpol",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "carbomer-980",
+    "name": "Carbomer 980",
+    "slug": "carbomer-980",
+    "category": "excipients",
+    "origin": "Shellpol",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "carmosine-supra",
+    "name": "Carmosine Supra",
+    "slug": "carmosine-supra",
+    "category": "colours",
+    "origin": "Koelow-201",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "caustic-potash-flakes",
+    "name": "Caustic Potash Flakes",
+    "slug": "caustic-potash-flakes",
+    "category": "solvents",
+    "origin": "Indian/Korea",
+    "packing": "50kg Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "caustic-soda-flakes",
+    "name": "Caustic Soda Flakes",
+    "slug": "caustic-soda-flakes",
+    "category": "solvents",
+    "origin": "Indian",
+    "packing": "50kg Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "caustic-soda-lye",
+    "name": "Caustic Soda Lye",
+    "slug": "caustic-soda-lye",
+    "category": "solvents",
+    "origin": "Indian",
+    "packing": "Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "chloroform",
+    "name": "Chloroform",
+    "slug": "chloroform",
+    "category": "solvents",
+    "origin": "China/Indian",
+    "packing": "Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "citric-acid",
+    "name": "Citric Acid",
+    "slug": "citric-acid",
+    "category": "solvents",
+    "origin": "China",
+    "packing": "25kg Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "citric-acid-monohydrate",
+    "name": "Citric Acid Monohydrate IP/BP/USP",
+    "slug": "citric-acid-monohydrate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "croscarmellose-sodium-ccs",
+    "name": "Croscarmellose Sodium (CCS)",
+    "slug": "croscarmellose-sodium-ccs",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "crospovidone",
+    "name": "Crospovidone",
+    "slug": "crospovidone",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "cyclohexane",
+    "name": "Cyclohexane",
+    "slug": "cyclohexane",
+    "category": "solvents",
+    "origin": "China/GSFC",
+    "packing": "Drum Packing",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "diethyl-malonate",
+    "name": "Di Ethyl Malonate",
+    "slug": "diethyl-malonate",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "diethylene-glycol-deg",
+    "name": "Di Ethylene Glycol (DEG)",
+    "slug": "diethylene-glycol-deg",
+    "category": "solvents",
+    "origin": "Indian/Imported",
+    "packing": "Drum/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "dimethyl-carbonate-dmc",
+    "name": "Di Methyl Carbonate (DMC)",
+    "slug": "dimethyl-carbonate-dmc",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "dimethyl-formamide-dmf",
+    "name": "Di Methyl Formamide (DMF)",
+    "slug": "dimethyl-formamide-dmf",
+    "category": "solvents",
+    "origin": "China/Korea/Turkey/Local",
+    "packing": "Drum/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "dimethyl-malonate",
+    "name": "Di Methyl Malonate",
+    "slug": "dimethyl-malonate",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "dimethyl-sulfoxide-dmso",
+    "name": "Di Methyl Sulfoxide (DMSO)",
+    "slug": "dimethyl-sulfoxide-dmso",
+    "category": "solvents",
+    "origin": "China",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "di-isopropyl-ether",
+    "name": "Di-Isopropyl Ether",
+    "slug": "di-isopropyl-ether",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "dicalcium-phosphate",
+    "name": "Dicalcium Phosphate",
+    "slug": "dicalcium-phosphate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "disodium-edetate",
+    "name": "Disodium Edetate IP/BP/USP",
+    "slug": "disodium-edetate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "epichlorohydrine",
+    "name": "Epichlorohydrine",
+    "slug": "epichlorohydrine",
+    "category": "solvents",
+    "origin": "German/Japan",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "erythrosine-supra",
+    "name": "Erythrosine Supra",
+    "slug": "erythrosine-supra",
+    "category": "colours",
+    "origin": "Koelow-301",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ethyl-acetate",
+    "name": "Ethyl Acetate",
+    "slug": "ethyl-acetate",
+    "category": "solvents",
+    "origin": "Satyam",
+    "packing": "205kg Drum/Tanker",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ethyl-aceto-acetate",
+    "name": "Ethyl Aceto Acetate",
+    "slug": "ethyl-aceto-acetate",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ethyl-cellulose",
+    "name": "Ethyl Cellulose",
+    "slug": "ethyl-cellulose",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ethyl-chloroformate",
+    "name": "Ethyl Chloroformate",
+    "slug": "ethyl-chloroformate",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ethyl-cyano-acetate",
+    "name": "Ethyl Cyano Acetate",
+    "slug": "ethyl-cyano-acetate",
+    "category": "solvents",
+    "origin": "Imported (Hebei Chengang)",
+    "packing": "Drum Pack 250kg HDPE",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ethylene-dichloride-edc",
+    "name": "Ethylene Dichloride (EDC)",
+    "slug": "ethylene-dichloride-edc",
+    "category": "solvents",
+    "origin": "Finolex",
+    "packing": "Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "folic-acid",
+    "name": "Folic Acid",
+    "slug": "folic-acid",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "formaldehyde-37",
+    "name": "Formaldehyde 37%",
+    "slug": "formaldehyde-37",
+    "category": "solvents",
+    "origin": "Indian",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "fructose",
+    "name": "Fructose",
+    "slug": "fructose",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "fumed-silica",
+    "name": "Fumed Silica",
+    "slug": "fumed-silica",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "hpmc",
+    "name": "HPMC",
+    "slug": "hpmc",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "hpmc-phthalate",
+    "name": "HPMC Phthalate",
+    "slug": "hpmc-phthalate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "hydrogen-hydrate-80",
+    "name": "Hydrogen Hydrate 80%",
+    "slug": "hydrogen-hydrate-80",
+    "category": "solvents",
+    "origin": "German/China",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "hydrogen-peroxide-50",
+    "name": "Hydrogen Peroxide 50%",
+    "slug": "hydrogen-peroxide-50",
+    "category": "solvents",
+    "origin": "Indian",
+    "packing": "Tanker/50kg Cargos",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "hydroxy-propyl-cellulose",
+    "name": "Hydroxy Propyl Cellulose",
+    "slug": "hydroxy-propyl-cellulose",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "indigo-carmine-supra",
+    "name": "Indigo Carmine Supra",
+    "slug": "indigo-carmine-supra",
+    "category": "colours",
+    "origin": "Koelow-150",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "iodine",
+    "name": "Iodine",
+    "slug": "iodine",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "iron-oxide-black",
+    "name": "Iron Oxide Black",
+    "slug": "iron-oxide-black",
+    "category": "colours",
+    "origin": "Koelin PH-999",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "iron-oxide-brown",
+    "name": "Iron Oxide Brown",
+    "slug": "iron-oxide-brown",
+    "category": "colours",
+    "origin": "Koelin PH-991",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "iron-oxide-red",
+    "name": "Iron Oxide Red",
+    "slug": "iron-oxide-red",
+    "category": "colours",
+    "origin": "Koelin PH-919",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "iron-oxide-yellow",
+    "name": "Iron Oxide Yellow",
+    "slug": "iron-oxide-yellow",
+    "category": "colours",
+    "origin": "Koelin PH-929",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "iso-propyl-alcohol-ipa",
+    "name": "Iso Propyl Alcohol (IPA)",
+    "slug": "iso-propyl-alcohol-ipa",
+    "category": "solvents",
+    "origin": "Indian/Taiwan",
+    "packing": "Drums/Tanker",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "koelron-amber-red",
+    "name": "Koelron Amber Red",
+    "slug": "koelron-amber-red",
+    "category": "colours",
+    "origin": "CPL PH-8364",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "koelron-brilliant-gold",
+    "name": "Koelron Brilliant Gold",
+    "slug": "koelron-brilliant-gold",
+    "category": "colours",
+    "origin": "CPL PH-5736",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "koelron-copper-fine",
+    "name": "Koelron Copper Fine",
+    "slug": "koelron-copper-fine",
+    "category": "colours",
+    "origin": "CPL PH-5782",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "koelron-silver",
+    "name": "Koelron Silver",
+    "slug": "koelron-silver",
+    "category": "colours",
+    "origin": "CPL PH-6219",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-arginine-base",
+    "name": "L-Arginine Base USP",
+    "slug": "l-arginine-base",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-arginine-hcl",
+    "name": "L-Arginine HCl USP",
+    "slug": "l-arginine-hcl",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-cysteine-hcl",
+    "name": "L-Cysteine HCl USP",
+    "slug": "l-cysteine-hcl",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-glutamic-acid",
+    "name": "L-Glutamic Acid USP",
+    "slug": "l-glutamic-acid",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-isoleucine",
+    "name": "L-Isoleucine USP",
+    "slug": "l-isoleucine",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-leucine",
+    "name": "L-Leucine USP",
+    "slug": "l-leucine",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-lysine-acetate",
+    "name": "L-Lysine Acetate USP",
+    "slug": "l-lysine-acetate",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-phenylalanine",
+    "name": "L-Phenylalanine USP",
+    "slug": "l-phenylalanine",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-proline",
+    "name": "L-Proline USP",
+    "slug": "l-proline",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-threonine",
+    "name": "L-Threonine USP",
+    "slug": "l-threonine",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-tryptophan",
+    "name": "L-Tryptophan USP",
+    "slug": "l-tryptophan",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-tyrosine",
+    "name": "L-Tyrosine USP",
+    "slug": "l-tyrosine",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "l-valine",
+    "name": "L-Valine USP",
+    "slug": "l-valine",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lactose-ip",
+    "name": "Lactose IP",
+    "slug": "lactose-ip",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-allura-red",
+    "name": "Lake of Allura Red",
+    "slug": "lake-allura-red",
+    "category": "colours",
+    "origin": "Koelor PH-351",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-amaranth",
+    "name": "Lake of Amaranth",
+    "slug": "lake-amaranth",
+    "category": "colours",
+    "origin": "Koelor PH-185",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-brilliant-blue",
+    "name": "Lake of Brilliant Blue",
+    "slug": "lake-brilliant-blue",
+    "category": "colours",
+    "origin": "Koelor PH-900",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-carmosine",
+    "name": "Lake of Carmosine",
+    "slug": "lake-carmosine",
+    "category": "colours",
+    "origin": "Koelor PH-201",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-erythrosine",
+    "name": "Lake of Erythrosine",
+    "slug": "lake-erythrosine",
+    "category": "colours",
+    "origin": "Koelor PH-305",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-indigo-carmine",
+    "name": "Lake of Indigo Carmine",
+    "slug": "lake-indigo-carmine",
+    "category": "colours",
+    "origin": "Koelor PH-150",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-ponceau-4r",
+    "name": "Lake of Ponceau 4R",
+    "slug": "lake-ponceau-4r",
+    "category": "colours",
+    "origin": "Koelor PH-255",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-quinoline-yellow",
+    "name": "Lake of Quinoline Yellow",
+    "slug": "lake-quinoline-yellow",
+    "category": "colours",
+    "origin": "Koelor PH-057",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-sunset-yellow",
+    "name": "Lake of Sunset Yellow",
+    "slug": "lake-sunset-yellow",
+    "category": "colours",
+    "origin": "Koelor PH-851",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lake-tartrazine",
+    "name": "Lake of Tartrazine",
+    "slug": "lake-tartrazine",
+    "category": "colours",
+    "origin": "Koelor PH-180",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "lycopene",
+    "name": "Lycopene",
+    "slug": "lycopene",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "magnesium-hydroxide",
+    "name": "Magnesium Hydroxide",
+    "slug": "magnesium-hydroxide",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "magnesium-stearate",
+    "name": "Magnesium Stearate",
+    "slug": "magnesium-stearate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "mannitol",
+    "name": "Mannitol",
+    "slug": "mannitol",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "methanol",
+    "name": "Methanol",
+    "slug": "methanol",
+    "category": "solvents",
+    "origin": "China/Deepak/Indian/Taiwan",
+    "packing": "Tanker",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "methyl-aceto-acetate-maa",
+    "name": "Methyl Aceto Acetate (MAA)",
+    "slug": "methyl-aceto-acetate-maa",
+    "category": "solvents",
+    "origin": "Easter/Lonza",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "methyl-ethyl-ketone-mek",
+    "name": "Methyl Ethyl Ketone (MEK)",
+    "slug": "methyl-ethyl-ketone-mek",
+    "category": "solvents",
+    "origin": "China/European",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "methyl-isobutyl-ketone-mibk",
+    "name": "Methyl Iso Butyl Ketone (MIBK)",
+    "slug": "methyl-isobutyl-ketone-mibk",
+    "category": "solvents",
+    "origin": "Taiwan/China",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "methylene-dichloride-mdc",
+    "name": "Methylene Dichloride (MDC)",
+    "slug": "methylene-dichloride-mdc",
+    "category": "solvents",
+    "origin": "China/Russian/Indian",
+    "packing": "Drums/Tanker",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "microcrystalline-cellulose-mcc",
+    "name": "Micro Crystalline Cellulose Powder (MCC)",
+    "slug": "microcrystalline-cellulose-mcc",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "mix-xylene",
+    "name": "Mix Xylene",
+    "slug": "mix-xylene",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "mma-40",
+    "name": "MMA 40%",
+    "slug": "mma-40",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "monoethylene-glycol-meg",
+    "name": "Monoethylene Glycol (MEG)",
+    "slug": "monoethylene-glycol-meg",
+    "category": "solvents",
+    "origin": "Indian/Imported",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "morpholine",
+    "name": "Morpholine",
+    "slug": "morpholine",
+    "category": "solvents",
+    "origin": "Indian",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "mtbe",
+    "name": "MTBE",
+    "slug": "mtbe",
+    "category": "solvents",
+    "origin": "Israel",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "n-butanol",
+    "name": "N-Butanol",
+    "slug": "n-butanol",
+    "category": "solvents",
+    "origin": "Iran",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "n-heptane",
+    "name": "N-Heptane",
+    "slug": "n-heptane",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "n-hexane-99",
+    "name": "N-Hexane 99%",
+    "slug": "n-hexane-99",
+    "category": "solvents",
+    "origin": "Korea/Haltermann",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "n-methyl-piperazine",
+    "name": "N-Methyl Piperazine",
+    "slug": "n-methyl-piperazine",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "n-pentane",
+    "name": "N-Pentane",
+    "slug": "n-pentane",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "n-propanol",
+    "name": "N-Propanol",
+    "slug": "n-propanol",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "orthoxylene",
+    "name": "Orthoxylene",
+    "slug": "orthoxylene",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums/Tanker",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "oxalic-acid",
+    "name": "Oxalic Acid",
+    "slug": "oxalic-acid",
+    "category": "solvents",
+    "origin": "Indian",
+    "packing": "50kg Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "paraformaldehyde-91-96",
+    "name": "Paraformaldehyde 91/96%",
+    "slug": "paraformaldehyde-91-96",
+    "category": "solvents",
+    "origin": "Taiwan",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "patent-blue-v-supra",
+    "name": "Patent Blue V Supra",
+    "slug": "patent-blue-v-supra",
+    "category": "colours",
+    "origin": "Koelow-024",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "peg-400",
+    "name": "PEG 400",
+    "slug": "peg-400",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "peg-4000",
+    "name": "PEG 4000",
+    "slug": "peg-4000",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "peg-6000",
+    "name": "PEG 6000",
+    "slug": "peg-6000",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "phosphoric-acid-85",
+    "name": "Phosphoric Acid 85%",
+    "slug": "phosphoric-acid-85",
+    "category": "solvents",
+    "origin": "Indian/Imported",
+    "packing": "Cargos",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "piperazine-anhydrous",
+    "name": "Piperazine Anhydrous",
+    "slug": "piperazine-anhydrous",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "piperidine",
+    "name": "Piperidine",
+    "slug": "piperidine",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ponceau-4r-supra",
+    "name": "Ponceau 4R Supra",
+    "slug": "ponceau-4r-supra",
+    "category": "colours",
+    "origin": "Koelow-255",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "potassium-citrate",
+    "name": "Potassium Citrate IP/BP/USP",
+    "slug": "potassium-citrate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "potassium-permanganate",
+    "name": "Potassium Permanganate",
+    "slug": "potassium-permanganate",
+    "category": "solvents",
+    "origin": "Indian",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "pvp-k30",
+    "name": "PVP K30",
+    "slug": "pvp-k30",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "pvp-k90",
+    "name": "PVP K90",
+    "slug": "pvp-k90",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "quinoline-yellow-supra",
+    "name": "Quinoline Yellow Supra",
+    "slug": "quinoline-yellow-supra",
+    "category": "colours",
+    "origin": "Koelow-051",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "soda-ash",
+    "name": "Soda Ash",
+    "slug": "soda-ash",
+    "category": "solvents",
+    "origin": "Indian/Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-alginate",
+    "name": "Sodium Alginate",
+    "slug": "sodium-alginate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-ascorbate",
+    "name": "Sodium Ascorbate",
+    "slug": "sodium-ascorbate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-bi-sulphite",
+    "name": "Sodium Bi Sulphite",
+    "slug": "sodium-bi-sulphite",
+    "category": "solvents",
+    "origin": "Indian/Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-citrate",
+    "name": "Sodium Citrate IP/BP/USP",
+    "slug": "sodium-citrate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-cmc",
+    "name": "Sodium CMC",
+    "slug": "sodium-cmc",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-lauryl-sulphate-sls",
+    "name": "Sodium Lauryl Sulphate (SLS)",
+    "slug": "sodium-lauryl-sulphate-sls",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-meta-bisulphite",
+    "name": "Sodium Meta Bisulphite",
+    "slug": "sodium-meta-bisulphite",
+    "category": "solvents",
+    "origin": "Indian/Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-nitrite",
+    "name": "Sodium Nitrite",
+    "slug": "sodium-nitrite",
+    "category": "solvents",
+    "origin": "Indian/Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-starch-glycolate",
+    "name": "Sodium Starch Glycolate",
+    "slug": "sodium-starch-glycolate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-stearyl-fumarate",
+    "name": "Sodium Stearyl Fumarate",
+    "slug": "sodium-stearyl-fumarate",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sodium-sulphate",
+    "name": "Sodium Sulphate",
+    "slug": "sodium-sulphate",
+    "category": "solvents",
+    "origin": "Indian/Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sorbitol",
+    "name": "Sorbitol",
+    "slug": "sorbitol",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "starch",
+    "name": "Starch",
+    "slug": "starch",
+    "category": "excipients",
+    "origin": "Indian",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "stearic-acid-powder",
+    "name": "Stearic Acid Powder",
+    "slug": "stearic-acid-powder",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sucralose",
+    "name": "Sucralose",
+    "slug": "sucralose",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sucrose",
+    "name": "Sucrose",
+    "slug": "sucrose",
+    "category": "excipients",
+    "origin": "Indian",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sunset-yellow-supra",
+    "name": "Sunset Yellow Supra",
+    "slug": "sunset-yellow-supra",
+    "category": "colours",
+    "origin": "Koelow-851",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "talc",
+    "name": "Talc",
+    "slug": "talc",
+    "category": "excipients",
+    "origin": "Indian",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "tartrazine-supra",
+    "name": "Tartrazine Supra",
+    "slug": "tartrazine-supra",
+    "category": "colours",
+    "origin": "Koelow-180",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "tertiary-butanol",
+    "name": "Tertiary Butanol",
+    "slug": "tertiary-butanol",
+    "category": "solvents",
+    "origin": "Japan/China",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "tetra-hydro-furan-thf",
+    "name": "Tetra Hydro Furan (THF)",
+    "slug": "tetra-hydro-furan-thf",
+    "category": "solvents",
+    "origin": "Taiwan",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "titanium-dioxide",
+    "name": "Titanium Dioxide IP/BP/USP",
+    "slug": "titanium-dioxide",
+    "category": "colours",
+    "origin": "Koelin",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "toluene",
+    "name": "Toluene",
+    "slug": "toluene",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums/Tanker",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "triethyl-ortho-formate",
+    "name": "Triethyl Ortho Formate",
+    "slug": "triethyl-ortho-formate",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "triethylamine",
+    "name": "Triethylamine",
+    "slug": "triethylamine",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "trimethyl-ortho-formate",
+    "name": "Trimethyl Ortho Formate",
+    "slug": "trimethyl-ortho-formate",
+    "category": "solvents",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "tween-20",
+    "name": "Tween 20",
+    "slug": "tween-20",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "tween-80",
+    "name": "Tween 80",
+    "slug": "tween-80",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Drums",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "vitamin-b1",
+    "name": "Vitamin B1",
+    "slug": "vitamin-b1",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "vitamin-b12",
+    "name": "Vitamin B12",
+    "slug": "vitamin-b12",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "vitamin-b2",
+    "name": "Vitamin B2",
+    "slug": "vitamin-b2",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "vitamin-b6",
+    "name": "Vitamin B6",
+    "slug": "vitamin-b6",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "vitamin-c",
+    "name": "Vitamin C",
+    "slug": "vitamin-c",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "vitamin-d2",
+    "name": "Vitamin D2",
+    "slug": "vitamin-d2",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "vitamin-d3",
+    "name": "Vitamin D3",
+    "slug": "vitamin-d3",
+    "category": "excipients",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "whey-protein-80",
+    "name": "Whey Protein 80%",
+    "slug": "whey-protein-80",
+    "category": "amino-acids",
+    "origin": "Imported",
+    "packing": "Bags",
+    "featured": true,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "xanthan-gum",
+    "name": "Xanthan Gum",
+    "slug": "xanthan-gum",
+    "category": "excipients",
+    "origin": "Deosen/Fufeng",
+    "packing": "Bags",
+    "featured": false,
+    "created_at": "2026-01-01T00:00:00.000Z"
+  }
+]
