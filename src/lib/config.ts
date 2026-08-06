@@ -5,13 +5,13 @@ export const SITE = {
   description:
     'Vijayalakkshmi Pharma is a leading supplier of pharmaceutical excipients, solvents, colours, and amino acids in Hyderabad, Telangana. Serving pharma manufacturers across India since decades.',
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://vijayalakkshmipharma.com').replace(/\/$/, ''),
-  phone: '7337227787',
-  phone2: '9182950996',
+  phone: '9182950996',
+  phone2: '7337227787',
   email: 'vijayalakkshmipharma@rediffmail.com',
   address: 'Plot No. 64, 3-3-414, RTC Colony, L.B. Nagar, Hyderabad - 500074, Telangana',
   mapsQuery: 'Plot No. 64, 3-3-414, RTC Colony, L.B. Nagar, Hyderabad, Telangana 500074',
   gst: '36ACWPN8683J1ZH',
-  whatsapp: '917337227787',
+  whatsapp: '9182950996',
   contacts: [
     { name: 'Venkat Ram Reddi', role: 'Proprietor', phone: '7337227787' },
     { name: 'Sathish Reddy', role: 'Sales & Marketing Executive', phone: '9182950996' },
