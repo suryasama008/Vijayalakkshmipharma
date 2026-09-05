@@ -1,15 +1,52 @@
+export type ProductCategory =
+  | 'solvents'
+  | 'colours'
+  | 'excipients'
+  | 'amino-acids'
+  | 'pellets'
+  | 'carbonates'
+  | 'phosphates'
+  | 'silicon-dioxide'
+  | 'vitamins'
+  | 'oils'
+  | 'flavours'
+  | 'api'
+  | 'food-nutra'
+  | 'other'
+
+export type ProductFAQ = {
+  q: string
+  a: string
+}
+
 export type Product = {
   id: string
   name: string
   slug: string
-  category: 'solvents' | 'colours' | 'excipients' | 'amino-acids' | 'other'
+  category: ProductCategory
   grade?: string
-  origin?: string
-  packing?: string
-  description?: string
-  cas_number?: string
   featured: boolean
   created_at: string
+
+  // --- Phase 2: elaborated content -------------------------------------
+  // All optional and populated incrementally, product by product. The
+  // product detail page renders a rich layout when `overview` is present,
+  // and falls back to the minimal layout otherwise - so partially-filled
+  // data never breaks a page. See HANDOFF-PHASE-2.md for the rollout plan.
+  metaTitle?: string
+  metaDescription?: string
+  h1?: string
+  overview?: string
+  specs?: Record<string, string>
+  applications?: string[]
+  relatedSlugs?: string[]
+  faq?: ProductFAQ[]
+  bestseller?: boolean
+  readyStock?: boolean
+  cas?: string
+  molecularFormula?: string
+  molecularWeight?: string
+  appearance?: string
 }
 
 export type Enquiry = {

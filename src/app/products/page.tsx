@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import ProductCard from '@/components/ProductCard'
-import Link from 'next/link'
-import { CATEGORIES, SITE } from '@/lib/config'
+import ProductsBrowser from '@/components/ProductsBrowser'
+import { SITE } from '@/lib/config'
 import { getAllProducts } from '@/lib/products'
 
 const title = 'All Pharma Raw Materials in Hyderabad'
@@ -16,9 +15,9 @@ export const metadata: Metadata = {
     url: '/products',
     title,
     description,
-    images: [{ url: '/pharma-global-banner.png', width: 1792, height: 1024, alt: 'Vijayalakkshmi Pharma raw materials catalogue' }],
+    images: [{ url: '/pharma-global-banner.webp', width: 1717, height: 916, alt: 'Vijayalakkshmi Pharma raw materials catalogue' }],
   },
-  twitter: { card: 'summary_large_image', title, description, images: ['/pharma-global-banner.png'] },
+  twitter: { card: 'summary_large_image', title, description, images: ['/pharma-global-banner.webp'] },
 }
 
 export default async function ProductsPage() {
@@ -43,30 +42,17 @@ export default async function ProductsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <div className="bg-[var(--brand-950)] px-4 py-14 text-white">
+        <div className="max-w-7xl mx-auto">
+          <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent-500)]">Full Catalogue</span>
+          <h1 className="font-display mt-2 text-3xl md:text-4xl font-extrabold text-white">Pharma Raw Materials</h1>
+          <p className="mt-3 text-blue-100/85 max-w-2xl">
+            {products.length > 0 ? `${products.length}+ pharmaceutical raw materials available. Select a product to enquire.` : 'Contact us for current availability, grade, and pricing.'}
+          </p>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Pharma Raw Materials</h1>
-        <p className="text-gray-600 mb-6">
-          {products.length > 0 ? `${products.length}+ pharmaceutical raw materials available. Select a product to enquire.` : 'Contact us for current availability, grade, packing, and pricing.'}
-        </p>
-        <nav aria-label="Product categories" className="flex flex-wrap gap-2 mb-8">
-          <Link href="/products" className="px-4 py-2 rounded-full bg-blue-700 text-white text-sm font-medium">All</Link>
-          {CATEGORIES.map((category) => (
-            <Link key={category.slug} href={`/products/category/${category.slug}`} className="px-4 py-2 rounded-full bg-gray-100 hover:bg-blue-100 text-gray-700 text-sm font-medium">
-              {category.label}
-            </Link>
-          ))}
-        </nav>
-        {products.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {products.map((product) => <ProductCard key={product.id} product={product} />)}
-          </div>
-        ) : (
-          <section className="border border-gray-200 bg-white rounded-lg p-8 text-center" aria-labelledby="catalogue-enquiry">
-            <h2 id="catalogue-enquiry" className="text-xl font-bold text-gray-900">Need a specific material?</h2>
-            <p className="mt-2 text-gray-600">Send us the product name, grade, packing, and required quantity for a quick quotation.</p>
-            <Link href="/contact" className="inline-block mt-5 bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800">Send Enquiry</Link>
-          </section>
-        )}
+        <ProductsBrowser products={products} />
       </div>
     </>
   )

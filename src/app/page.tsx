@@ -3,8 +3,25 @@ import type { Metadata } from 'next'
 import { SITE, CATEGORIES } from '@/lib/config'
 import homepageData from '@/data/homepage.json'
 import ProductCard from '@/components/ProductCard'
-import { Phone, Mail, MapPin, CheckCircle } from 'lucide-react'
-import { getFeaturedProducts } from '@/lib/products'
+import CategoryIcon from '@/components/CategoryIcon'
+import { getCategoryColorClasses } from '@/lib/category-colors'
+import {
+  Phone,
+  Mail,
+  MapPin,
+  ShieldCheck,
+  Layers,
+  BadgeCheck,
+  Boxes,
+  Truck,
+  Zap,
+  ArrowRight,
+} from 'lucide-react'
+import { getFeaturedProducts, getAllProducts } from '@/lib/products'
+
+// One icon per "Why choose us" card, in the same order as
+// homepageData.whyChooseUs.items in src/data/homepage.json.
+const WHY_CHOOSE_ICONS = [ShieldCheck, Layers, BadgeCheck, Boxes, Truck, Zap]
 
 export const metadata: Metadata = {
   title: homepageData.seo.title,
@@ -20,9 +37,9 @@ export const metadata: Metadata = {
     description: homepageData.seo.description,
     images: [
       {
-        url: '/pharma-global-banner.png',
-        width: 1792,
-        height: 1024,
+        url: '/pharma-global-banner.webp',
+        width: 1717,
+        height: 916,
         alt: 'Vijayalakkshmi Pharma pharmaceutical raw materials, solvents, colours, and global supply banner',
       },
     ],
@@ -31,20 +48,21 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: homepageData.seo.title,
     description: homepageData.seo.description,
-    images: ['/pharma-global-banner.png'],
+    images: ['/pharma-global-banner.webp'],
   },
 }
 
 
 export default async function HomePage() {
   const featured = await getFeaturedProducts()
+  const allProducts = await getAllProducts()
   const homeSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: homepageData.seo.title,
     description: homepageData.seo.description,
     url: SITE.url,
-    primaryImageOfPage: `${SITE.url}/pharma-global-banner.png`,
+    primaryImageOfPage: `${SITE.url}/pharma-global-banner.webp`,
     about: homepageData.whyChooseUs.items.map((item) => item.title),
     mainEntity: {
       '@type': 'ItemList',
@@ -61,131 +79,175 @@ export default async function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} />
       <section
-        className="relative overflow-hidden bg-white px-4 py-20 text-slate-950 md:py-24"
+        className="relative overflow-hidden bg-[var(--brand-950)] px-4 py-24 text-white md:py-32"
         style={{
           backgroundImage:
-            'linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.9) 38%, rgba(255,255,255,0.38) 70%, rgba(255,255,255,0.18) 100%), url(/pharma-global-banner.png)',
+            'linear-gradient(115deg, rgba(6,22,52,0.97) 0%, rgba(11,36,84,0.93) 45%, rgba(11,36,84,0.72) 75%, rgba(11,36,84,0.45) 100%), url(/pharma-global-banner.webp)',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="absolute inset-0 bg-dot-grid-light opacity-40" aria-hidden="true" />
+        <div className="relative max-w-7xl mx-auto">
           <div className="max-w-2xl">
-            <p className="text-blue-700 text-sm font-semibold mb-3 uppercase tracking-widest">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-blue-100 ring-1 ring-white/20 backdrop-blur-sm">
+              <MapPin className="w-3.5 h-3.5" />
               {homepageData.hero.eyebrow}
-            </p>
-            <h1 className="text-3xl md:text-5xl font-bold mb-5 leading-tight text-blue-950">
+            </span>
+            <h1 className="font-display mt-6 text-4xl md:text-6xl font-extrabold leading-[1.08] tracking-tight text-white">
               {homepageData.hero.title}
             </h1>
-            <p className="text-slate-700 text-lg mb-8 leading-relaxed">
+            <p className="mt-6 text-lg text-blue-100/90 leading-relaxed">
               {homepageData.hero.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="mt-9 flex flex-col sm:flex-row gap-3">
               <Link
                 href="/products"
-                className="bg-blue-700 text-white font-bold px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors text-center"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--accent-500)] px-8 py-3.5 font-semibold text-white shadow-lg shadow-teal-900/30 transition-colors hover:bg-[var(--accent-600)]"
               >
                 {homepageData.hero.primaryAction}
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-blue-700 text-blue-800 font-bold px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/30 bg-white/5 px-8 py-3.5 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/15"
               >
                 {homepageData.hero.secondaryAction}
               </Link>
             </div>
-            <div className="mt-10 grid grid-cols-2 gap-3 text-sm text-slate-700 sm:flex sm:flex-wrap">
-              {homepageData.hero.trustPoints.map((point) => (
-                <span key={point} className="rounded-full bg-white/90 px-4 py-2 font-medium shadow-sm ring-1 ring-blue-100">
-                  {point}
-                </span>
-              ))}
-            </div>
           </div>
+
+          <dl className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/15 sm:grid-cols-4">
+            {homepageData.hero.trustPoints.map((point) => (
+              <div
+                key={point}
+                className="flex items-center justify-center bg-[var(--brand-950)]/60 px-4 py-6 text-center sm:justify-start sm:text-left"
+              >
+                <dt className="sr-only">Trust point</dt>
+                <dd className="font-display text-sm font-bold text-white sm:text-base">{point}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
-      <section className="bg-white px-4 py-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 md:grid-cols-3">
-          <article className="border border-gray-200 bg-white p-5 rounded-lg">
-            <h2 className="text-base font-bold text-gray-900 mb-2">Supplier Location</h2>
-            <p className="text-sm text-gray-600">{homepageData.hero.eyebrow}</p>
+      <section className="bg-white px-4 py-14">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-5 md:grid-cols-3">
+          <article className="card-hover rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--brand-100)]">
+              <MapPin className="h-5 w-5 text-[var(--brand-700)]" />
+            </div>
+            <h2 className="font-display text-base font-bold text-gray-900 mb-1.5">Supplier Location</h2>
+            <p className="text-sm text-gray-600 leading-relaxed">{homepageData.hero.eyebrow}</p>
           </article>
-          <article className="border border-gray-200 bg-white p-5 rounded-lg">
-            <h2 className="text-base font-bold text-gray-900 mb-2">Core Supply Range</h2>
-            <p className="text-sm text-gray-600">{homepageData.categoryIntro.description}</p>
+          <article className="card-hover rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--brand-100)]">
+              <Boxes className="h-5 w-5 text-[var(--brand-700)]" />
+            </div>
+            <h2 className="font-display text-base font-bold text-gray-900 mb-1.5">Core Supply Range</h2>
+            <p className="text-sm text-gray-600 leading-relaxed">{homepageData.categoryIntro.description}</p>
           </article>
-          <article className="border border-gray-200 bg-white p-5 rounded-lg">
-            <h2 className="text-base font-bold text-gray-900 mb-2">Enquiry Support</h2>
-            <p className="text-sm text-gray-600">Pricing, grade, packing, MOQ, and delivery support for every enquiry.</p>
+          <article className="card-hover rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--brand-100)]">
+              <Zap className="h-5 w-5 text-[var(--brand-700)]" />
+            </div>
+            <h2 className="font-display text-base font-bold text-gray-900 mb-1.5">Enquiry Support</h2>
+            <p className="text-sm text-gray-600 leading-relaxed">Pricing, grade, MOQ, and delivery support for every enquiry.</p>
           </article>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-14 bg-white">
-        <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">{homepageData.categoryIntro.title}</h2>
-        <p className="text-gray-500 text-center mb-8">{homepageData.categoryIntro.description}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {CATEGORIES.map(cat => (
-            <Link
-              key={cat.slug}
-              href={`/products/category/${cat.slug}`}
-              className="bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all p-6 flex flex-col"
-            >
-              <span className="text-sm font-bold text-blue-700 mb-3 uppercase tracking-wide">{cat.icon}</span>
-              <h3 className="font-bold text-gray-900 mb-2">{cat.label}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{cat.description}</p>
-              <span className="mt-4 text-blue-600 text-sm font-medium">Browse -&gt;</span>
-            </Link>
-          ))}
+      <section className="max-w-7xl mx-auto px-4 py-16 bg-white">
+        <div className="max-w-2xl mx-auto text-center mb-12">
+          <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent-600)]">Catalogue</span>
+          <h2 className="font-display mt-2 text-3xl font-extrabold text-gray-900">{homepageData.categoryIntro.title}</h2>
+          <p className="mt-3 text-gray-500">{homepageData.categoryIntro.description}</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {CATEGORIES.map(cat => {
+            const colors = getCategoryColorClasses(cat.color)
+            return (
+              <Link
+                key={cat.slug}
+                href={`/products/category/${cat.slug}`}
+                className="group card-hover flex flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:border-transparent hover:shadow-xl"
+              >
+                <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${colors.bg} ring-4 ring-transparent transition-all ${colors.ring}`}>
+                  <CategoryIcon slug={cat.slug} className={`h-6 w-6 ${colors.text}`} />
+                </div>
+                <h3 className="font-display font-bold text-gray-900 mb-2">{cat.label}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed flex-1">{cat.description}</p>
+                <span className={`mt-4 inline-flex items-center gap-1 text-sm font-semibold ${colors.text}`}>
+                  Browse <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            )
+          })}
         </div>
       </section>
 
       {featured.length > 0 && (
-        <section className="bg-white py-14 px-4 border-y border-gray-100">
+        <section className="bg-[var(--brand-50)] py-16 px-4 border-y border-gray-100">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">{homepageData.featuredIntro.title}</h2>
-            <p className="text-gray-500 text-center mb-8">{homepageData.featuredIntro.description}</p>
+            <div className="max-w-2xl mx-auto text-center mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent-600)]">In Demand</span>
+              <h2 className="font-display mt-2 text-3xl font-extrabold text-gray-900">{homepageData.featuredIntro.title}</h2>
+              <p className="mt-3 text-gray-500">{homepageData.featuredIntro.description}</p>
+            </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {featured.map(p => (
                 <ProductCard key={p.id} product={p} />
               ))}
             </div>
-            <div className="text-center mt-8">
+            <div className="text-center mt-10">
               <Link
                 href="/products"
-                className="inline-block bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors"
+                className="inline-flex items-center gap-2 bg-[var(--brand-800)] text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-[var(--brand-900)] transition-colors shadow-sm"
               >
-                View All 150+ Products
+                View All {allProducts.length}+ Products
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
         </section>
       )}
 
-      <section className="max-w-7xl mx-auto px-4 py-14 bg-white">
-        <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">{homepageData.whyChooseUs.title}</h2>
+      <section className="max-w-7xl mx-auto px-4 py-16 bg-white">
+        <div className="max-w-2xl mx-auto text-center mb-12">
+          <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent-600)]">Why VL Pharma</span>
+          <h2 className="font-display mt-2 text-3xl font-extrabold text-gray-900">{homepageData.whyChooseUs.title}</h2>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {homepageData.whyChooseUs.items.map(item => (
-            <div key={item.title} className="flex gap-4">
-              <CheckCircle className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-500">{item.description}</p>
+          {homepageData.whyChooseUs.items.map((item, i) => {
+            const Icon = WHY_CHOOSE_ICONS[i % WHY_CHOOSE_ICONS.length]
+            return (
+              <div key={item.title} className="card-hover rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--brand-100)]">
+                  <Icon className="h-5 w-5 text-[var(--brand-700)]" />
+                </div>
+                <h3 className="font-display font-bold text-gray-900 mb-1.5">{item.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </section>
 
-      <section className="bg-white text-gray-950 py-14 px-4 border-t border-gray-100">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-3 text-blue-950">{homepageData.cta.title}</h2>
-          <p className="text-gray-600 mb-8">{homepageData.cta.description}</p>
+      <section
+        className="relative overflow-hidden bg-[var(--brand-950)] py-16 px-4"
+        style={{
+          backgroundImage:
+            'linear-gradient(135deg, var(--brand-950) 0%, var(--brand-900) 55%, var(--brand-800) 100%)',
+        }}
+      >
+        <div className="absolute inset-0 bg-dot-grid-light opacity-30" aria-hidden="true" />
+        <div className="relative max-w-3xl mx-auto text-center">
+          <h2 className="font-display text-3xl font-extrabold mb-3 text-white">{homepageData.cta.title}</h2>
+          <p className="text-blue-100/90 mb-9 text-lg">{homepageData.cta.description}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href={`tel:${SITE.phone}`}
-              className="flex items-center gap-2 bg-blue-700 text-white font-bold px-6 py-3 rounded-lg hover:bg-blue-800"
+              className="flex items-center gap-2 bg-[var(--accent-500)] text-white font-bold px-7 py-3.5 rounded-lg hover:bg-[var(--accent-600)] transition-colors shadow-lg shadow-teal-900/30"
             >
               <Phone className="w-4 h-4" /> {SITE.phone}
             </a>
@@ -193,18 +255,18 @@ export default async function HomePage() {
               href={`https://wa.me/${SITE.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg"
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-7 py-3.5 rounded-lg transition-colors"
             >
               WhatsApp Us
             </a>
             <Link
               href="/contact"
-              className="flex items-center gap-2 border-2 border-blue-700 text-blue-800 font-bold px-6 py-3 rounded-lg hover:bg-blue-50"
+              className="flex items-center gap-2 border border-white/30 bg-white/5 text-white font-bold px-7 py-3.5 rounded-lg hover:bg-white/15 backdrop-blur-sm transition-colors"
             >
               <Mail className="w-4 h-4" /> Enquiry Form
             </Link>
           </div>
-          <p className="mt-6 text-gray-600 text-sm flex items-center justify-center gap-2">
+          <p className="mt-8 text-blue-200/80 text-sm flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4" /> {SITE.address}
           </p>
         </div>

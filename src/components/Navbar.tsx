@@ -1,24 +1,38 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { SITE, CATEGORIES } from '@/lib/config'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, ChevronDown } from 'lucide-react'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [categoriesOpen, setCategoriesOpen] = useState(false)
+  const [mobileCategoriesOpen, setMobileCategoriesOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setCategoriesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-40">
-      <div className="bg-blue-900 text-white text-sm py-1">
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div className="bg-[var(--brand-950)] text-blue-100 text-xs sm:text-sm py-1.5">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <span>GST: {SITE.gst}</span>
-          <a href={`tel:${SITE.phone}`} className="flex items-center gap-1 hover:text-blue-200">
+          <span className="hidden sm:inline tracking-wide">GST: {SITE.gst}</span>
+          <span className="sm:hidden tracking-wide">GST Registered</span>
+          <a href={`tel:${SITE.phone}`} className="flex items-center gap-1.5 font-medium hover:text-white transition-colors">
             <Phone className="w-3 h-3" /> {SITE.phone}
           </a>
         </div>
       </div>
-      <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 py-3.5 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 leading-tight">
           <Image
             src="/vl-pharma-logo.png"
@@ -26,24 +40,51 @@ export default function Navbar() {
             width={48}
             height={48}
             priority
-            className="h-12 w-12 rounded-full"
+            className="h-11 w-11 rounded-full ring-1 ring-gray-100"
           />
           <span className="flex flex-col">
-            <span className="font-bold text-xl text-blue-900">Vijayalakkshmi Pharma</span>
-            <span className="text-xs text-gray-500">L.B. Nagar, Hyderabad</span>
+            <span className="font-display font-bold text-lg sm:text-xl text-[var(--brand-900)] leading-tight">Vijayalakkshmi Pharma</span>
+            <span className="text-[11px] text-gray-500 tracking-wide">L.B. Nagar, Hyderabad</span>
           </span>
         </Link>
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
-          <Link href="/products" className="hover:text-blue-700">All Products</Link>
-          {CATEGORIES.map(c => (
-            <Link key={c.slug} href={`/products/category/${c.slug}`} className="hover:text-blue-700">
-              {c.label}
-            </Link>
-          ))}
-          <Link href="/about" className="hover:text-blue-700">About</Link>
+        <div className="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-600">
+          <Link href="/products" className="hover:text-[var(--brand-700)] transition-colors">All Products</Link>
+
+          <div className="relative" ref={dropdownRef}>
+            <button
+              type="button"
+              onClick={() => setCategoriesOpen((v) => !v)}
+              aria-expanded={categoriesOpen}
+              aria-haspopup="true"
+              className="flex items-center gap-1 hover:text-[var(--brand-700)] transition-colors"
+            >
+              Categories
+              <ChevronDown className={`w-4 h-4 transition-transform ${categoriesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+            </button>
+            {categoriesOpen && (
+              <div
+                role="menu"
+                className="absolute left-1/2 top-full mt-3 w-[560px] max-w-[90vw] -translate-x-1/2 rounded-xl border border-gray-200 bg-white p-3 shadow-2xl shadow-gray-300/40 grid grid-cols-2 gap-1"
+              >
+                {CATEGORIES.map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/products/category/${c.slug}`}
+                    role="menuitem"
+                    onClick={() => setCategoriesOpen(false)}
+                    className="rounded-lg px-3 py-2 hover:bg-[var(--brand-50)] hover:text-[var(--brand-700)] transition-colors"
+                  >
+                    <span className="block font-semibold text-gray-900 text-sm">{c.label}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link href="/about" className="hover:text-[var(--brand-700)] transition-colors">About</Link>
           <Link
             href="/contact"
-            className="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800"
+            className="bg-[var(--brand-800)] text-white px-5 py-2.5 rounded-lg hover:bg-[var(--brand-900)] transition-colors shadow-sm"
           >
             Enquire Now
           </Link>
@@ -60,15 +101,35 @@ export default function Navbar() {
         </button>
       </nav>
       {open && (
-        <div id="mobile-navigation" className="md:hidden bg-white border-t px-4 py-4 flex flex-col gap-3 text-sm font-medium text-gray-700">
-          <Link href="/products" onClick={() => setOpen(false)}>All Products</Link>
-          {CATEGORIES.map(c => (
-            <Link key={c.slug} href={`/products/category/${c.slug}`} onClick={() => setOpen(false)}>
-              {c.label}
-            </Link>
-          ))}
-          <Link href="/about" onClick={() => setOpen(false)}>About</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
+        <div id="mobile-navigation" className="md:hidden bg-white border-t px-4 py-4 flex flex-col gap-1 text-sm font-semibold text-gray-700">
+          <Link href="/products" className="py-2" onClick={() => setOpen(false)}>All Products</Link>
+
+          <button
+            type="button"
+            onClick={() => setMobileCategoriesOpen((v) => !v)}
+            aria-expanded={mobileCategoriesOpen}
+            className="flex items-center justify-between py-2 text-left"
+          >
+            Categories
+            <ChevronDown className={`w-4 h-4 transition-transform ${mobileCategoriesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+          </button>
+          {mobileCategoriesOpen && (
+            <div className="pl-3 flex flex-col gap-1 border-l-2 border-[var(--brand-100)] mb-1">
+              {CATEGORIES.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/products/category/${c.slug}`}
+                  className="py-1.5 font-medium text-gray-600"
+                  onClick={() => setOpen(false)}
+                >
+                  {c.label}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          <Link href="/about" className="py-2" onClick={() => setOpen(false)}>About</Link>
+          <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 bg-[var(--brand-800)] text-white px-4 py-2.5 rounded-lg text-center">
             Enquire Now
           </Link>
         </div>

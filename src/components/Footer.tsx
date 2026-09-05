@@ -4,11 +4,11 @@ import { Phone, Mail, MapPin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 text-blue-100 mt-16">
-      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-[var(--brand-950)] text-blue-100 mt-16 border-t-4 border-[var(--accent-500)]">
+      <div className="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          <h3 className="text-white font-bold text-lg mb-2">Vijayalakkshmi Pharma</h3>
-          <p className="text-sm text-blue-300 mb-4">
+          <h3 className="font-display text-white font-bold text-lg mb-2">Vijayalakkshmi Pharma</h3>
+          <p className="text-sm text-blue-300 mb-4 leading-relaxed">
             Leading supplier of pharmaceutical raw materials, excipients, solvents, and colours in Hyderabad, Telangana.
           </p>
           <div className="space-y-2 text-sm">
@@ -29,10 +29,12 @@ export default function Footer() {
           </div>
           <p className="text-xs text-blue-400 mt-4">GST: {SITE.gst}</p>
         </div>
-        <div>
-          <h4 className="text-white font-semibold mb-3">Products</h4>
-          <ul className="space-y-2 text-sm">
-            <li><Link href="/products" className="hover:text-white">All Products</Link></li>
+        <div className="md:col-span-1">
+          <h4 className="font-display text-white font-semibold mb-3">Products</h4>
+          <ul className="mb-2 text-sm">
+            <li><Link href="/products" className="hover:text-white font-medium">All Products</Link></li>
+          </ul>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm">
             {CATEGORIES.map(c => (
               <li key={c.slug}>
                 <Link href={`/products/category/${c.slug}`} className="hover:text-white">
@@ -43,7 +45,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="text-white font-semibold mb-3">Company</h4>
+          <h4 className="font-display text-white font-semibold mb-3">Company</h4>
           <ul className="space-y-2 text-sm">
             <li><Link href="/about" className="hover:text-white">About Us</Link></li>
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>

@@ -1,17 +1,21 @@
 {
   "seo": {
     "title": "Vijayalakkshmi Pharma | Pharma Raw Materials Supplier in Hyderabad",
-    "description": "Vijayalakkshmi Pharma supplies pharmaceutical excipients, solvents, pharma colours, amino acids, nutraceutical ingredients, and industrial chemicals from L.B. Nagar, Hyderabad to manufacturers across India.",
+    "description": "Vijayalakkshmi Pharma supplies pharmaceutical excipients, solvents, colours, amino acids, vitamins, phosphates, carbonates, oils, flavours, APIs, and nutraceutical raw materials from L.B. Nagar, Hyderabad to manufacturers across India.",
     "keywords": [
       "pharma raw materials supplier Hyderabad",
       "pharmaceutical excipients supplier Hyderabad",
       "chemical solvents supplier Hyderabad",
-      "pharma colours supplier India",
+      "colours supplier India",
       "amino acids supplier Hyderabad",
+      "vitamins supplier Hyderabad",
       "nutraceutical ingredients supplier India",
+      "food grade raw materials supplier India",
       "IPA supplier Hyderabad",
       "HPMC supplier Hyderabad",
       "MCC supplier Hyderabad",
+      "Aerosil supplier Hyderabad",
+      "Paracetamol IP supplier India",
       "Vijayalakkshmi Pharma LB Nagar"
     ]
   },
@@ -22,7 +26,7 @@
     "primaryAction": "View All Products",
     "secondaryAction": "Get a Quote",
     "trustPoints": [
-      "150+ Products",
+      "292+ Products",
       "IP / BP / USP Grades",
       "Pan India Supply",
       "Bulk & Retail Quantities"
@@ -30,7 +34,7 @@
   },
   "categoryIntro": {
     "title": "Product Categories",
-    "description": "Browse a focused range of pharmaceutical raw materials, solvents, colours, and formulation ingredients."
+    "description": "Browse 13 categories of pharmaceutical raw materials - solvents, colours, excipients, amino acids, vitamins, phosphates, carbonates, oils, flavours, APIs, and more."
   },
   "featuredIntro": {
     "title": "Popular Products",
@@ -61,12 +65,12 @@
       },
       {
         "title": "Quick Enquiry Response",
-        "description": "Fast quotations for product price, packing, grade, origin, MOQ, and delivery schedule."
+        "description": "Fast quotations for product price, grade, MOQ, and delivery schedule."
       }
     ]
   },
   "cta": {
     "title": "Ready to Source Pharma Raw Materials?",
-    "description": "Call, WhatsApp, or send an enquiry for pricing, packing, grade, availability, and dispatch details."
+    "description": "Call, WhatsApp, or send an enquiry for pricing, grade, availability, and dispatch details."
   }
 }

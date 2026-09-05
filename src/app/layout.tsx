@@ -1,8 +1,27 @@
 import type { Metadata } from 'next'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { SITE } from '@/lib/config'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+
+// NOTE: these variable names deliberately differ from the Tailwind theme
+// tokens (--font-sans / --font-display) defined in globals.css's
+// `@theme inline` block. Naming them identically would make
+// `--font-sans: var(--font-sans)` a self-reference, which browsers treat
+// as invalid and silently drop — the font would never actually apply.
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-jakarta',
+  display: 'swap',
+  weight: ['600', '700', '800'],
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -42,9 +61,9 @@ export const metadata: Metadata = {
     description: SITE.description,
     images: [
       {
-        url: '/pharma-global-banner.png',
-        width: 1792,
-        height: 1024,
+        url: '/pharma-global-banner.webp',
+        width: 1717,
+        height: 916,
         alt: 'Vijayalakkshmi Pharma pharmaceutical and chemical raw materials supplier',
       },
     ],
@@ -53,7 +72,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE.name} | Pharma Raw Materials Supplier Hyderabad`,
     description: SITE.description,
-    images: ['/pharma-global-banner.png'],
+    images: ['/pharma-global-banner.webp'],
   },
   robots: {
     index: true,
@@ -76,7 +95,7 @@ const structuredData = {
   description: SITE.description,
   url: SITE.url,
   logo: `${SITE.url}/vl-pharma-logo.png`,
-  image: `${SITE.url}/pharma-global-banner.png`,
+  image: `${SITE.url}/pharma-global-banner.webp`,
   telephone: SITE.phone,
   email: SITE.email,
   taxID: SITE.gst,
@@ -102,14 +121,14 @@ const structuredData = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="bg-white text-gray-950">
+      <body className="bg-white text-gray-950 antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />

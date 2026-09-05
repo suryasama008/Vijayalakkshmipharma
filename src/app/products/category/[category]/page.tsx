@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import ProductCard from '@/components/ProductCard'
+import ProductsBrowser from '@/components/ProductsBrowser'
+import CategoryIcon from '@/components/CategoryIcon'
+import { getCategoryColorClasses } from '@/lib/category-colors'
 import { CATEGORIES, SITE } from '@/lib/config'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
@@ -32,9 +34,9 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       url,
       title,
       description,
-      images: [{ url: '/pharma-global-banner.png', width: 1792, height: 1024, alt: `${item.label} supplier in Hyderabad` }],
+      images: [{ url: '/pharma-global-banner.webp', width: 1717, height: 916, alt: `${item.label} supplier in Hyderabad` }],
     },
-    twitter: { card: 'summary_large_image', title, description, images: ['/pharma-global-banner.png'] },
+    twitter: { card: 'summary_large_image', title, description, images: ['/pharma-global-banner.webp'] },
   }
 }
 
@@ -75,29 +77,39 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-sm text-gray-500 mb-6">
-          <Link href="/" className="hover:text-blue-600">Home</Link>
-          <ChevronRight className="w-4 h-4" aria-hidden="true" />
-          <Link href="/products" className="hover:text-blue-600">Products</Link>
-          <ChevronRight className="w-4 h-4" aria-hidden="true" />
-          <span className="text-gray-900" aria-current="page">{item.label}</span>
-        </nav>
-        <header className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-blue-700">Vijayalakkshmi Pharma</p>
-          <h1 className="text-3xl font-bold text-gray-900 mt-2">{item.label} Supplier in Hyderabad</h1>
-          <p className="text-gray-600 mt-2 max-w-2xl">{item.description}</p>
-          <p className="text-sm text-blue-700 font-medium mt-2">{items.length} products available</p>
-        </header>
-        {items.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {items.map((product) => <ProductCard key={product.id} product={product} />)}
+      <div className="bg-[var(--brand-950)] px-4 py-14 text-white">
+        <div className="max-w-7xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-sm text-blue-200/80 mb-6">
+            <Link href="/" className="hover:text-white">Home</Link>
+            <ChevronRight className="w-4 h-4" aria-hidden="true" />
+            <Link href="/products" className="hover:text-white">Products</Link>
+            <ChevronRight className="w-4 h-4" aria-hidden="true" />
+            <span className="text-white" aria-current="page">{item.label}</span>
+          </nav>
+          <div className="flex items-start gap-4">
+            <div className={`hidden sm:flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${getCategoryColorClasses(item.color).bg}`}>
+              <CategoryIcon slug={item.slug} className={`h-7 w-7 ${getCategoryColorClasses(item.color).text}`} />
+            </div>
+            <div>
+              <h1 className="font-display text-3xl md:text-4xl font-extrabold text-white">{item.label} Supplier in Hyderabad</h1>
+              <p className="mt-3 text-blue-100/85 max-w-2xl">{item.description}</p>
+              <p className="text-sm text-[var(--accent-500)] font-semibold mt-3">{items.length} products available</p>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 py-10">
+        {items.length > 0 ? (
+          <ProductsBrowser
+            products={items}
+            showTabs={false}
+            searchPlaceholder={`Search within ${item.label}...`}
+          />
         ) : (
           <div className="border border-gray-200 bg-white rounded-lg p-8 text-center">
             <h2 className="text-xl font-bold text-gray-900">Products available on enquiry </h2>
-            <p className="mt-2 text-gray-600">Contact us for current availability, grade, packing, and pricing for {item.label.toLowerCase()}.</p>
-            <Link href="/contact" className="inline-block mt-5 bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800">Send Enquiry</Link>
+            <p className="mt-2 text-gray-600">Contact us for current availability, grade, and pricing for {item.label.toLowerCase()}.</p>
+            <Link href="/contact" className="inline-block mt-5 bg-[var(--brand-800)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[var(--brand-900)]">Send Enquiry</Link>
           </div>
         )}
       </div>

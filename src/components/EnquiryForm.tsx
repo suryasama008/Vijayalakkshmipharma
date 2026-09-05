@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, Send } from 'lucide-react'
 import { SITE } from '@/lib/config'
 
 export default function EnquiryForm({ productName }: { productName?: string }) {
@@ -45,16 +45,19 @@ export default function EnquiryForm({ productName }: { productName?: string }) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
         <CheckCircle className="mx-auto mb-2 h-9 w-9 text-green-600" aria-hidden="true" />
-        <h3 className="font-bold text-green-800 text-lg">Opening WhatsApp...</h3>
+        <h3 className="font-display font-bold text-green-800 text-lg">Opening WhatsApp...</h3>
         <p className="text-green-700 mt-1">Send the message and we will get back to you shortly.</p>
       </div>
     )
   }
 
+  const inputClasses =
+    'w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--brand-100)] focus:border-[var(--brand-600)] transition-colors'
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       {productName && (
-        <div className="bg-blue-50 text-blue-800 text-sm rounded-lg px-4 py-2">
+        <div className="bg-[var(--brand-50)] border border-[var(--brand-100)] text-[var(--brand-900)] text-sm rounded-lg px-4 py-2">
           Enquiry for: <strong>{productName}</strong>
         </div>
       )}
@@ -68,7 +71,7 @@ export default function EnquiryForm({ productName }: { productName?: string }) {
             id="enquiry-name"
             value={form.name}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className={inputClasses}
             placeholder="Your name"
             autoComplete="name"
             required
@@ -81,7 +84,7 @@ export default function EnquiryForm({ productName }: { productName?: string }) {
             id="enquiry-company"
             value={form.company}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className={inputClasses}
             placeholder="Company name"
             autoComplete="organization"
           />
@@ -96,7 +99,7 @@ export default function EnquiryForm({ productName }: { productName?: string }) {
             value={form.phone}
             onChange={handleChange}
             type="tel"
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className={inputClasses}
             placeholder="Mobile number"
             autoComplete="tel"
             inputMode="tel"
@@ -111,7 +114,7 @@ export default function EnquiryForm({ productName }: { productName?: string }) {
             value={form.email}
             onChange={handleChange}
             type="email"
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className={inputClasses}
             placeholder="Email address"
             autoComplete="email"
           />
@@ -125,15 +128,16 @@ export default function EnquiryForm({ productName }: { productName?: string }) {
           value={form.message}
           onChange={handleChange}
           rows={3}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className={inputClasses}
           placeholder="Quantity, grade, any specific requirements..."
         />
       </div>
       {error && <p className="text-red-600 text-sm">{error}</p>}
       <button
         type="submit"
-        className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition-colors"
+        className="w-full flex items-center justify-center gap-2 bg-[var(--brand-800)] hover:bg-[var(--brand-900)] text-white font-semibold py-3 rounded-lg transition-colors"
       >
+        <Send className="w-4 h-4" aria-hidden="true" />
         Send Enquiry via WhatsApp
       </button>
     </form>
