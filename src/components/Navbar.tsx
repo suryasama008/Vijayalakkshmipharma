@@ -25,7 +25,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="bg-[var(--brand-950)] text-blue-100 text-xs sm:text-sm py-1.5">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <span className="hidden sm:inline tracking-wide">GST: {SITE.gst}</span>
+          <span className="sm:inline tracking-wide">GST: {SITE.gst}</span>
           <a href={`tel:${SITE.phone}`} className="flex items-center gap-1.5 font-medium hover:text-white transition-colors">
             <Phone className="w-3 h-3" /> {SITE.phone}
           </a>
